@@ -1,8 +1,8 @@
 /**
- * ËµÃ÷£ºÎÄ¼şIO²Ù×÷¹¤¾ßÀà
- * ±àĞ´Õß£ºĞ»Æ½
- * ÈÕÆÚ£ºNov 20, 2007
- * ºşÄÏÇ¿ÖÇ¿Æ¼¼°æÈ¨ËùÓĞ¡£
+ * è¯´æ˜ï¼šæ–‡ä»¶IOæ“ä½œå·¥å…·ç±»
+ * ç¼–å†™è€…ï¼šè°¢å¹³
+ * æ—¥æœŸï¼šNov 20, 2007
+ * æ¹–å—å¼ºæ™ºç§‘æŠ€ç‰ˆæƒæ‰€æœ‰ã€‚
  */
 package io;
 
@@ -47,21 +47,21 @@ import java.util.zip.ZipInputStream;
 
 /**
  * <p>
- * Title:ÎÄ¼şIO²Ù×÷¹¤¾ßÀà
+ * Title:æ–‡ä»¶IOæ“ä½œå·¥å…·ç±»
  * <p>
- * Description:ÎÄ¼şIO²Ù×÷¹¤¾ßÀà£¬ÇëÊ¹ÓÃÕâ¸ö¹¤¾ßÀàÍê³ÉÎÄ¼ş²Ù×÷
+ * Description:æ–‡ä»¶IOæ“ä½œå·¥å…·ç±»ï¼Œè¯·ä½¿ç”¨è¿™ä¸ªå·¥å…·ç±»å®Œæˆæ–‡ä»¶æ“ä½œ
  * </p>
  * <p>
  * Copyright: Copyright (c) 2007
  * </p>
  * <p>
- * Company: ºşÄÏÇ¿ÖÇ¿Æ¼¼·¢Õ¹ÓĞÏŞ¹«Ë¾
+ * Company: æ¹–å—å¼ºæ™ºç§‘æŠ€å‘å±•æœ‰é™å…¬å¸
  * </p>
  * 
  */
 public class FileIO {
 	/**
-	 * readFile(String filePath) Í¨¹ıÎÄ¼şÂ·¾¶ÒÔ×Ö½Ú·½Ê½¶ÁÈ¡ÎÄ¼şÄÚÈİ
+	 * readFile(String filePath) é€šè¿‡æ–‡ä»¶è·¯å¾„ä»¥å­—èŠ‚æ–¹å¼è¯»å–æ–‡ä»¶å†…å®¹
 	 * 
 	 * @param filePath
 	 *            String
@@ -73,7 +73,7 @@ public class FileIO {
 			File f = new File(filePath);
 			if (f.exists()) {
 				FileInputStream bw = new FileInputStream(f);
-		int len = bw.available();//¿É»ñµÃµÄ³¤¶È ¶ÔÓÚÍøÂç´«Êä¿ÉÄÜ»áÒòÎªÍøÂç×èÈû¶ø²»ÕıÈ·
+		int len = bw.available();//å¯è·å¾—çš„é•¿åº¦ å¯¹äºç½‘ç»œä¼ è¾“å¯èƒ½ä¼šå› ä¸ºç½‘ç»œé˜»å¡è€Œä¸æ­£ç¡®
 				byte[] str = new byte[len];
 				if (bw.read(str) == -1) {
 					info = "";
@@ -91,7 +91,7 @@ public class FileIO {
 	}
 
 	/**
-	 * readFile(String filePath, String charset) Í¨¹ıÎÄ¼şÂ·¾¶ÒÔ×Ö½Ú·½Ê½°´ÕÕÖ¸¶¨µÄ±àÂë¶ÁÈ¡ÎÄ¼şÄÚÈİ
+	 * readFile(String filePath, String charset) é€šè¿‡æ–‡ä»¶è·¯å¾„ä»¥å­—èŠ‚æ–¹å¼æŒ‰ç…§æŒ‡å®šçš„ç¼–ç è¯»å–æ–‡ä»¶å†…å®¹
 	 * 
 	 * @param filePath
 	 *            String
@@ -123,7 +123,7 @@ public class FileIO {
 	}
 
 	/**
-	 * writeFile(String msg, String filePath) ÒÔ×Ö½ÚµÄ·½Ê½Ğ´ÎÄ¼ş ÍÆ¼öÊ¹ÓÃ
+	 * writeFile(String msg, String filePath) ä»¥å­—èŠ‚çš„æ–¹å¼å†™æ–‡ä»¶ æ¨èä½¿ç”¨
 	 * 
 	 * @param msg
 	 *            String
@@ -152,7 +152,7 @@ public class FileIO {
 	}
 
 	/**
-	 * ÒÔÁ÷µÄ·½Ê½Ğ´ÎÄ¼ş
+	 * ä»¥æµçš„æ–¹å¼å†™æ–‡ä»¶
 	 * 
 	 * @param msg
 	 * @param filePath
@@ -174,7 +174,7 @@ public class FileIO {
 	}
 
 	/**
-	 * makeDir(String directoryName) ÎŞÌõ¼ş½¨Á¢Ò»¸öÄ¿Â¼
+	 * makeDir(String directoryName) æ— æ¡ä»¶å»ºç«‹ä¸€ä¸ªç›®å½•
 	 * 
 	 * @param directoryName
 	 *            String
@@ -194,7 +194,7 @@ public class FileIO {
 
 	/**
 	 * cutFile(String sourceDirectoryName,String sourceFileName, String
-	 * DestDirectoryName,String DestFileName) °Ñ±¾µØÎÄ¼şcutµ½ÁíÒ»¸öÄ¿Â¼
+	 * DestDirectoryName,String DestFileName) æŠŠæœ¬åœ°æ–‡ä»¶cutåˆ°å¦ä¸€ä¸ªç›®å½•
 	 * 
 	 * @param sourceDirectoryName
 	 *            String
@@ -224,7 +224,7 @@ public class FileIO {
 
 	/**
 	 * cutFiles(String sourceDirectoryName, String DestDirectoryName,Vector
-	 * fileNames) °Ñ±¾µØ¶à¸öÎÄ¼şcutµ½ÁíÒ»¸öÄ¿Â¼
+	 * fileNames) æŠŠæœ¬åœ°å¤šä¸ªæ–‡ä»¶cutåˆ°å¦ä¸€ä¸ªç›®å½•
 	 * 
 	 * @param sourceDirectoryName
 	 *            String
@@ -257,7 +257,7 @@ public class FileIO {
 	}
 
 	/**
-	 * copyFile(File src,File dest) °Ñ±¾µØÒ»¸öÎÄ¼şcopyµ½ÁíÒ»¸öµØ·½
+	 * copyFile(File src,File dest) æŠŠæœ¬åœ°ä¸€ä¸ªæ–‡ä»¶copyåˆ°å¦ä¸€ä¸ªåœ°æ–¹
 	 * 
 	 * @param src
 	 *            File
@@ -267,7 +267,7 @@ public class FileIO {
 	 */
 	public static void copyFile(File src, File dest) throws java.io.IOException {
 		int length = (int) src.length();
-		// ·Ö¿é¿½±´×ª·¢µÄ¸½¼ş
+		// åˆ†å—æ‹·è´è½¬å‘çš„é™„ä»¶
 		int block = 20000000;
 		int blocknum = length / block;
 		int blockmod = length % block;
@@ -305,7 +305,7 @@ public class FileIO {
 	}
 
 	/**
-	 * copyDirectory(String srcDir,String destDir) °Ñ±¾µØÒ»¸öÄ¿Â¼ÏÂËùÓĞÎÄ¼şcopyµ½ÁíÒ»¸öÄ¿Â¼¡£
+	 * copyDirectory(String srcDir,String destDir) æŠŠæœ¬åœ°ä¸€ä¸ªç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶copyåˆ°å¦ä¸€ä¸ªç›®å½•ã€‚
 	 * 
 	 * @param srcDir
 	 *            String
@@ -343,7 +343,7 @@ public class FileIO {
 	}
 
 	/**
-	 * seperateBasicFilename(String wholeFilename) ´ÓÍêÕûµÄÂ·¾¶ÃûÖĞ»ñÈ¡²»°üº¬Â·¾¶ĞÅÏ¢µÄÎÄ¼şÃû
+	 * seperateBasicFilename(String wholeFilename) ä»å®Œæ•´çš„è·¯å¾„åä¸­è·å–ä¸åŒ…å«è·¯å¾„ä¿¡æ¯çš„æ–‡ä»¶å
 	 * 
 	 * @param wholeFilename
 	 *            String
@@ -360,7 +360,7 @@ public class FileIO {
 	}
 
 	/**
-	 * seperateSimpleFilename(String wholeFilename) ´ÓÍêÕûµÄÂ·¾¶ÃûÖĞ»ñÈ¡²»°üº¬Â·¾¶ĞÅÏ¢Ã»ÓĞÀ©Õ¹ÃûµÄÎÄ¼şÃû
+	 * seperateSimpleFilename(String wholeFilename) ä»å®Œæ•´çš„è·¯å¾„åä¸­è·å–ä¸åŒ…å«è·¯å¾„ä¿¡æ¯æ²¡æœ‰æ‰©å±•åçš„æ–‡ä»¶å
 	 * 
 	 * @param wholeFilename
 	 *            String
@@ -378,7 +378,7 @@ public class FileIO {
 	}
 
 	/**
-	 * getFileExt(String fileName) ´ÓÎÄ¼şÃûÖĞÈ¡µÃÎÄ¼şÀ©Õ¹Ãû
+	 * getFileExt(String fileName) ä»æ–‡ä»¶åä¸­å–å¾—æ–‡ä»¶æ‰©å±•å
 	 * 
 	 * @param fileName
 	 *            String
@@ -393,7 +393,7 @@ public class FileIO {
 
 	/**
 	 * getRealFilePath(ServletContext context,String filePath)
-	 * ÊäÈëÒ»¸öÎÄ¼şµÄÏà¶ÔÂ·¾¶£¬·µ»ØËûµÄ¾ø¶ÔÂ·¾¶£¬ĞèÒªServletContextĞÅÏ¢
+	 * è¾“å…¥ä¸€ä¸ªæ–‡ä»¶çš„ç›¸å¯¹è·¯å¾„ï¼Œè¿”å›ä»–çš„ç»å¯¹è·¯å¾„ï¼Œéœ€è¦ServletContextä¿¡æ¯
 	 * 
 	 * @param context
 	 *            ServletContext
@@ -411,7 +411,7 @@ public class FileIO {
 	 * 
 	 * @param realFilePath
 	 *            String
-	 * @return boolean É¾³ıÎÄ¼ş»òÄ¿Â¼
+	 * @return boolean åˆ é™¤æ–‡ä»¶æˆ–ç›®å½•
 	 */
 	public static boolean deleteFile(String realFilePath) {
 		boolean flag = false;
@@ -427,7 +427,7 @@ public class FileIO {
 	/**
 	 * @param args
 	 */
-	// É¾³ıÎÄ¼ş¼ĞÏÂµÄËùÓĞÎÄ¼ş
+	// åˆ é™¤æ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
 	public static boolean deleteAllFile(String folderFullPath) {
 		boolean ret = false;
 		File file = new File(folderFullPath);
@@ -449,7 +449,7 @@ public class FileIO {
 	/**
 	 * @param args
 	 */
-	// É¾³ıÎÄ¼ş¼ĞÏÂµÄËùÓĞÎÄ¼ş
+	// åˆ é™¤æ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
 	public static String getAllFristFile(String folderFullPath) {
 		String path = "";
 		File file = new File(folderFullPath);
@@ -469,7 +469,7 @@ public class FileIO {
 	}
 
 	/**
-	 * ½âÑ¹Ëõ¹¦ÄÜ. ½«ZIP_FILENAMEÎÄ¼ş½âÑ¹µ½ZIP_DIRÄ¿Â¼ÏÂ.
+	 * è§£å‹ç¼©åŠŸèƒ½. å°†ZIP_FILENAMEæ–‡ä»¶è§£å‹åˆ°ZIP_DIRç›®å½•ä¸‹.
 	 * 
 	 * @throws Exception
 	 */
@@ -488,7 +488,7 @@ public class FileIO {
 			System.out.println("Extracting: " + ze.getName() + "\t"
 					+ ze.getSize() + "\t" + ze.getCompressedSize());
 
-			// ÒÔZipEntryÎª²ÎÊıµÃµ½Ò»¸öInputStream£¬²¢Ğ´µ½OutputStreamÖĞ
+			// ä»¥ZipEntryä¸ºå‚æ•°å¾—åˆ°ä¸€ä¸ªInputStreamï¼Œå¹¶å†™åˆ°OutputStreamä¸­
 			OutputStream os = new BufferedOutputStream(new FileOutputStream(
 					getRealFileName(baseDir, ze.getName())));
 			InputStream is = new BufferedInputStream(zfile.getInputStream(ze));
@@ -505,13 +505,13 @@ public class FileIO {
 	}
 
 	/**
-	 * ¸ø¶¨¸ùÄ¿Â¼£¬·µ»ØÒ»¸öÏà¶ÔÂ·¾¶Ëù¶ÔÓ¦µÄÊµ¼ÊÎÄ¼şÃû.
+	 * ç»™å®šæ ¹ç›®å½•ï¼Œè¿”å›ä¸€ä¸ªç›¸å¯¹è·¯å¾„æ‰€å¯¹åº”çš„å®é™…æ–‡ä»¶å.
 	 * 
 	 * @param baseDir
-	 *            Ö¸¶¨¸ùÄ¿Â¼
+	 *            æŒ‡å®šæ ¹ç›®å½•
 	 * @param absFileName
-	 *            Ïà¶ÔÂ·¾¶Ãû£¬À´×ÔÓÚZipEntryÖĞµÄname
-	 * @return java.io.File Êµ¼ÊµÄÎÄ¼ş
+	 *            ç›¸å¯¹è·¯å¾„åï¼Œæ¥è‡ªäºZipEntryä¸­çš„name
+	 * @return java.io.File å®é™…çš„æ–‡ä»¶
 	 */
 	public static File getRealFileName(String baseDir, String absFileName) {
 		String[] dirs = absFileName.split("/");
@@ -529,7 +529,7 @@ public class FileIO {
 	}
 
 	/**
-	 * checkFilesFolder(String realFilePath) ¼ì²éÎÄ¼şÂ·¾¶ÊÇ·ñ´æÔÚ
+	 * checkFilesFolder(String realFilePath) æ£€æŸ¥æ–‡ä»¶è·¯å¾„æ˜¯å¦å­˜åœ¨
 	 * 
 	 * @param realFilePath
 	 *            String
@@ -547,7 +547,7 @@ public class FileIO {
 	}
 
 	/**
-	 * isAllowFile(String flag, String fileName) ¼ì²éÍ¼ĞÎÎÄ¼şÃûÊÇ·ñºÏ·¨--*.jpg;*.gif;*.gif
+	 * isAllowFile(String flag, String fileName) æ£€æŸ¥å›¾å½¢æ–‡ä»¶åæ˜¯å¦åˆæ³•--*.jpg;*.gif;*.gif
 	 * 
 	 * @param flag
 	 *            String
@@ -568,7 +568,7 @@ public class FileIO {
 	}
 
 	/**
-	 * creatFile(InputStream stream, String outPutRealPath) ÒÔÎÄ¼şÁ÷µÄĞÎÊ½½¨Á¢ÎÄ¼ş
+	 * creatFile(InputStream stream, String outPutRealPath) ä»¥æ–‡ä»¶æµçš„å½¢å¼å»ºç«‹æ–‡ä»¶
 	 * 
 	 * @param stream
 	 *            InputStream
@@ -600,7 +600,7 @@ public class FileIO {
 
 	/**
 	 * shrinkImage(String inRealPath, String outRealPath, int outWidth, int
-	 * outHeigh) ½«Í¼ĞÎÎÄ¼ş°´ÕÕÖ¸¶¨×î´ó¿í¸ßËõ·Å£¬Èç¹ûĞ¡ÓÚÖ¸¶¨¿í¸ß£¬Ôò¿½±´
+	 * outHeigh) å°†å›¾å½¢æ–‡ä»¶æŒ‰ç…§æŒ‡å®šæœ€å¤§å®½é«˜ç¼©æ”¾ï¼Œå¦‚æœå°äºæŒ‡å®šå®½é«˜ï¼Œåˆ™æ‹·è´
 	 * 
 	 * @param inRealPath
 	 *            String
@@ -616,15 +616,15 @@ public class FileIO {
 			int outWidth, int outHeigh) {
 		boolean opFlag = false;
 		try {
-			File _file = new File(inRealPath); // ¶ÁÈëÎÄ¼ş
-			Image src = javax.imageio.ImageIO.read(_file); // ¹¹ÔìImage¶ÔÏó
-			int width = src.getWidth(null); // µÃµ½Ô´Í¼¿í
-			int height = src.getHeight(null); // µÃµ½Ô´Í¼³¤
+			File _file = new File(inRealPath); // è¯»å…¥æ–‡ä»¶
+			Image src = javax.imageio.ImageIO.read(_file); // æ„é€ Imageå¯¹è±¡
+			int width = src.getWidth(null); // å¾—åˆ°æºå›¾å®½
+			int height = src.getHeight(null); // å¾—åˆ°æºå›¾é•¿
 			int newWidth = 1;
 			int newHeight = 1;
-			// ¸ù¾İÔ´³¤¿íËõ·Å
+			// æ ¹æ®æºé•¿å®½ç¼©æ”¾
 			if (width < outWidth && height < outHeigh) {
-				// ¿½±´Ô­Í¼
+				// æ‹·è´åŸå›¾
 				copyFile(new File(inRealPath), new File(outRealPath));
 			} else {
 				if (width >= height) {
@@ -634,15 +634,15 @@ public class FileIO {
 					newHeight = outHeigh;
 					newWidth = outHeigh * width / height;
 				}
-				// »æÖÆËõĞ¡ºóµÄÍ¼
+				// ç»˜åˆ¶ç¼©å°åçš„å›¾
 				BufferedImage tag = new BufferedImage(newWidth, newHeight,
 						BufferedImage.TYPE_INT_RGB);
 				tag.getGraphics().drawImage(src, 0, 0, newWidth, newHeight,
 						null);
-				// Êä³öµ½ÎÄ¼şÁ÷
+				// è¾“å‡ºåˆ°æ–‡ä»¶æµ
 				FileOutputStream out = new FileOutputStream(outRealPath);
 				JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
-				// ½üJPEG±àÂë
+				// è¿‘JPEGç¼–ç 
 				encoder.encode(tag);
 				out.close();
 			}
@@ -654,7 +654,7 @@ public class FileIO {
 	}
 
 	/**
-	 * getDirectoryFilesNum(String realPath) »ñµÃÒ»¸öÄ¿Â¼ÏÂµÄÎÄ¼şÊıÁ¿
+	 * getDirectoryFilesNum(String realPath) è·å¾—ä¸€ä¸ªç›®å½•ä¸‹çš„æ–‡ä»¶æ•°é‡
 	 * 
 	 * @param realPath
 	 *            String
@@ -673,7 +673,7 @@ public class FileIO {
 	}
 
 	/**
-	 * getDirectoryFilesName(String realPath) »ñµÃ¸ÃÄ¿Â¼ÏÂËùÓĞÎÄ¼şÃû×Ö£¨°üº¬À©Õ¹Ãû£©
+	 * getDirectoryFilesName(String realPath) è·å¾—è¯¥ç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶åå­—ï¼ˆåŒ…å«æ‰©å±•åï¼‰
 	 * 
 	 * @param realPath
 	 *            String
@@ -695,7 +695,7 @@ public class FileIO {
 	}
 
 	/**
-	 * »ñµÃÄ¿Â¼ÏÂËùÓĞÎÄ¼ş¶ÔÏó
+	 * è·å¾—ç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶å¯¹è±¡
 	 * 
 	 * @param realPath
 	 *            String
@@ -717,7 +717,7 @@ public class FileIO {
 	}
 
 	/**
-	 * getSubDirsName(String realPath) »ñµÃ¸ÃÄ¿Â¼ÏÂËùÓĞ×ÓÄ¿Â¼
+	 * getSubDirsName(String realPath) è·å¾—è¯¥ç›®å½•ä¸‹æ‰€æœ‰å­ç›®å½•
 	 * 
 	 * @param realPath
 	 *            String
@@ -739,22 +739,22 @@ public class FileIO {
 	}
 
 	/**
-	 * smartMakeDir(ServletContext context,String filePath) ÊäÈëcontext¡¢Ïà¶ÔÂ·¾¶½¨Á¢Ä¿Â¼
+	 * smartMakeDir(ServletContext context,String filePath) è¾“å…¥contextã€ç›¸å¯¹è·¯å¾„å»ºç«‹ç›®å½•
 	 * 
 	 * @param context
 	 *            ServletContext
 	 * @param filePath
 	 *            String
-	 * @return int ½¨Á¢Ä¿Â¼µÄÊıÁ¿ -1´íÎóÎŞ·¨½¨Á¢Ä¿Â¼
+	 * @return int å»ºç«‹ç›®å½•çš„æ•°é‡ -1é”™è¯¯æ— æ³•å»ºç«‹ç›®å½•
 	 */
 	public static int smartMakeDir(ServletContext context, String filePath) {
 		int opFlag = 0;
-		// ·Ö½âÂ·¾¶
+		// åˆ†è§£è·¯å¾„
 		String[] tempPath = filePath.substring(1).split("/");
 		String tempStr = "";
 		String realPath;
 		for (int i = 0; i < tempPath.length; i++) {
-			// ¼ì²é¸ÃÂ·¾¶ÊÇ·ñ´æÔÚ£¬²»´æÔÚ¾Í½¨Á¢
+			// æ£€æŸ¥è¯¥è·¯å¾„æ˜¯å¦å­˜åœ¨ï¼Œä¸å­˜åœ¨å°±å»ºç«‹
 			tempStr += "/" + tempPath[i];
 			realPath = getRealFilePath(context, tempStr);
 			if (!checkFilesFolder(realPath)) {
@@ -770,7 +770,7 @@ public class FileIO {
 	}
 
 	/**
-	 * String makeDirName(int buildID) ¸ù¾İÈÎÒâID¶Ô23,19,17È¡Ä£Éú³ÉÄ¿Â¼Ãû,´Ó¶øÉú³ÉÏàÓ¦µÄÄ¿Â¼½á¹¹;
+	 * String makeDirName(int buildID) æ ¹æ®ä»»æ„IDå¯¹23,19,17å–æ¨¡ç”Ÿæˆç›®å½•å,ä»è€Œç”Ÿæˆç›¸åº”çš„ç›®å½•ç»“æ„;
 	 * 
 	 * @param buildID
 	 *            int
@@ -834,7 +834,7 @@ public class FileIO {
 	}
 
 	/**
-	 * createImgWaterMark(String filePath, String watermark) ÔÚÍ¼Æ¬ÉÏ´òÉÏË®Ó¡
+	 * createImgWaterMark(String filePath, String watermark) åœ¨å›¾ç‰‡ä¸Šæ‰“ä¸Šæ°´å°
 	 * 
 	 * @param filePath
 	 *            String
@@ -844,8 +844,8 @@ public class FileIO {
 	 */
 	public static boolean createImgWaterMark(String filePath, String watermark) {
 		try {
-			File _file = new File(filePath); // ¶ÁÈëÎÄ¼ş
-			Image theImg = javax.imageio.ImageIO.read(_file); // ¹¹ÔìImage¶ÔÏó
+			File _file = new File(filePath); // è¯»å…¥æ–‡ä»¶
+			Image theImg = javax.imageio.ImageIO.read(_file); // æ„é€ Imageå¯¹è±¡
 			ImageIcon waterIcon = new ImageIcon("temp");
 			Image waterImg = waterIcon.getImage();
 			int width = theImg.getWidth(null);
@@ -857,7 +857,7 @@ public class FileIO {
 			g.setBackground(Color.white);
 			g.drawImage(theImg, 0, 0, null);
 			g.drawImage(waterImg, 100, 100, null);
-			g.drawString(watermark, 10, 10); // Ìí¼ÓÎÄ×Ö
+			g.drawString(watermark, 10, 10); // æ·»åŠ æ–‡å­—
 			g.dispose();
 			FileOutputStream out = new FileOutputStream(filePath);
 			JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
@@ -873,11 +873,11 @@ public class FileIO {
 	}
 
 	/**
-	 * ÊäÈëStrutsµÄFormFile¶ÔÏó£¬ÉÏ´«Ò»¸öÎÄ¼ş
+	 * è¾“å…¥Strutsçš„FormFileå¯¹è±¡ï¼Œä¸Šä¼ ä¸€ä¸ªæ–‡ä»¶
 	 * 
 	 * @param file
 	 * @param request
-	 * @return ÎÄ¼şÏà¶ÔÂ·¾¶
+	 * @return æ–‡ä»¶ç›¸å¯¹è·¯å¾„
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
@@ -914,7 +914,7 @@ public class FileIO {
 	}
 
 	/**
-	 * ÎÄ¼şÉÏ´«ĞÂ·½·¨£¬°´¾ø¶ÔµØÖ·ÉÏ´«
+	 * æ–‡ä»¶ä¸Šä¼ æ–°æ–¹æ³•ï¼ŒæŒ‰ç»å¯¹åœ°å€ä¸Šä¼ 
 	 * 
 	 * @param file
 	 * @param request
@@ -969,11 +969,11 @@ public class FileIO {
 	}
 
 	/**
-	 * ÊäÈëStrutsµÄFormFileÕÕÆ¬¶ÔÏó£¬ÉÏ´«Ò»¸öÎÄ¼ş
+	 * è¾“å…¥Strutsçš„FormFileç…§ç‰‡å¯¹è±¡ï¼Œä¸Šä¼ ä¸€ä¸ªæ–‡ä»¶
 	 * 
 	 * @param file
 	 * @param request
-	 * @return ÎÄ¼şÏà¶ÔÂ·¾¶
+	 * @return æ–‡ä»¶ç›¸å¯¹è·¯å¾„
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
@@ -1010,7 +1010,7 @@ public class FileIO {
 	}
 
 	/**
-	 * ËµÃ÷£º±¾·½·¨Ö¸¶¨ÌØ¶¨Â·¾¶ ½ö¹©Ñ§ÉúÏàÆ¬ÉÏ´« ×÷Õß: ÕÂ²¨ ÉÏ´«Â·¾¶: uploadfile/studentphoto/ÈëÑ§Äê·İ/Ñ§ºÅ.jpg
+	 * è¯´æ˜ï¼šæœ¬æ–¹æ³•æŒ‡å®šç‰¹å®šè·¯å¾„ ä»…ä¾›å­¦ç”Ÿç›¸ç‰‡ä¸Šä¼  ä½œè€…: ç« æ³¢ ä¸Šä¼ è·¯å¾„: uploadfile/studentphoto/å…¥å­¦å¹´ä»½/å­¦å·.jpg
 	 * 
 	 */
 	public static String doXSUploadFile(FormFile file,
@@ -1048,12 +1048,12 @@ public class FileIO {
 	}
 
 	/**
-	 * ÊäÈëStrutsµÄFormFile¶ÔÏó£¬ÉÏ´«Ò»¸öÎÄ¼ş£¬Ö¸¶¨ÎÄ¼şÃû
+	 * è¾“å…¥Strutsçš„FormFileå¯¹è±¡ï¼Œä¸Šä¼ ä¸€ä¸ªæ–‡ä»¶ï¼ŒæŒ‡å®šæ–‡ä»¶å
 	 * 
 	 * @param file
 	 * @param request
 	 * @param fileName
-	 * @return ÎÄ¼şÏà¶ÔÂ·¾¶
+	 * @return æ–‡ä»¶ç›¸å¯¹è·¯å¾„
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
@@ -1089,12 +1089,12 @@ public class FileIO {
 	}
 
 	/**
-	 * ½âÑ¹ÎÄ¼ş¼Ğ
+	 * è§£å‹æ–‡ä»¶å¤¹
 	 * 
 	 * @param zipFileName
 	 * @param request
 	 * @param extPlace
-	 * @return ÎÄ¼şÏà¶ÔÂ·¾¶
+	 * @return æ–‡ä»¶ç›¸å¯¹è·¯å¾„
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
@@ -1113,10 +1113,10 @@ public class FileIO {
 				if (entry.isDirectory()) {
 					File file = new File(entryName);
 					file.mkdirs();
-					System.out.println("´´½¨ÎÄ¼ş¼Ğ: " + entryName);
+					System.out.println("åˆ›å»ºæ–‡ä»¶å¤¹: " + entryName);
 				} else {
 					try {
-						if (entryName.indexOf("/") >= 0)// ´øÎÄ¼ş¼Ğ
+						if (entryName.indexOf("/") >= 0)// å¸¦æ–‡ä»¶å¤¹
 						{
 							String[] entryNamesz = entryName.split("/");
 							entryName = entryNamesz[entryNamesz.length - 1];
@@ -1127,7 +1127,7 @@ public class FileIO {
 
 					FileOutputStream os = new FileOutputStream(extPlace + "\\"
 							+ entryName);
-					System.out.println("´´½¨ÎÄ¼ş¼Ğ: " + entryName);
+					System.out.println("åˆ›å»ºæ–‡ä»¶å¤¹: " + entryName);
 					// Transfer bytes from the ZIP file to the output file
 					byte[] buf = new byte[1024];
 
@@ -1144,15 +1144,15 @@ public class FileIO {
 		} catch (IOException e) {
 			String aaaString = "";
 		}
-		System.out.println("½âÑ¹ÎÄ¼ş³É¹¦ ");
+		System.out.println("è§£å‹æ–‡ä»¶æˆåŠŸ ");
 	}
 
 	/**
-	 * Ğ´ÎÄ¼ş
+	 * å†™æ–‡ä»¶
 	 * 
 	 * @param msg
 	 * @param request
-	 * @return ÎÄ¼şµØÖ·
+	 * @return æ–‡ä»¶åœ°å€
 	 */
 	public static String writeFile(String msg, HttpServletRequest request) {
 		String filepath = "";
@@ -1176,7 +1176,7 @@ public class FileIO {
 	}
 
 	/**
-	 * Í¨¹ıÏà¶ÔµØÖ·É¾³ıÒ»¸öÎÄ¼ş
+	 * é€šè¿‡ç›¸å¯¹åœ°å€åˆ é™¤ä¸€ä¸ªæ–‡ä»¶
 	 * 
 	 * @param filePath
 	 * @param request
@@ -1189,7 +1189,7 @@ public class FileIO {
 	}
 
 	/**
-	 * Í¨¹ı¾ø¶ÔµØÖ·É¾³ıÒ»¸öÎÄ¼ş
+	 * é€šè¿‡ç»å¯¹åœ°å€åˆ é™¤ä¸€ä¸ªæ–‡ä»¶
 	 * 
 	 * @param filePath
 	 * @param request
@@ -1200,21 +1200,21 @@ public class FileIO {
 	}
 
 	/**
-	 * ÔÚ¿ØÖÆÌ¨ÉÏÊä³öËùÓĞµÄÓ³ÉäÎÄ¼şĞÅÏ¢£¬ÓÃÓÚÎ¬»¤hibernate.cfg.xml
+	 * åœ¨æ§åˆ¶å°ä¸Šè¾“å‡ºæ‰€æœ‰çš„æ˜ å°„æ–‡ä»¶ä¿¡æ¯ï¼Œç”¨äºç»´æŠ¤hibernate.cfg.xml
 	 * 
 	 * @param path
-	 *            Ä¿Â¼Â·¾¶D:/workspace1.4/QZWF/src/com/qzdatasoft/comm/framework/
+	 *            ç›®å½•è·¯å¾„D:/workspace1.4/QZWF/src/com/qzdatasoft/comm/framework/
 	 *            bean
 	 * @param packagename
-	 *            °üÃûcom/qzdatasoft/comm/framework/bean/
+	 *            åŒ…åcom/qzdatasoft/comm/framework/bean/
 	 * @param cnModleName
-	 *            ¿ØÖÆ¿ò¼Ü
-	 * @return Ó³ÉäÎÄ¼şÊıÁ¿
+	 *            æ§åˆ¶æ¡†æ¶
+	 * @return æ˜ å°„æ–‡ä»¶æ•°é‡
 	 */
 	public static int getHibernaetMappingXml(String path, String packagename,
 			String cnModleName) {
-		// »ñµÃframework/beanÏÂËùÓĞµÄXMLÎÄ¼ş
-		System.out.println("<!-- " + cnModleName + "¿ªÊ¼ -->");
+		// è·å¾—framework/beanä¸‹æ‰€æœ‰çš„XMLæ–‡ä»¶
+		System.out.println("<!-- " + cnModleName + "å¼€å§‹ -->");
 		List fbean = FileIO.getDirectoryFilesName(path);
 		int count = 0;
 		for (int i = 0; i < fbean.size(); i++) {
@@ -1224,71 +1224,71 @@ public class FileIO {
 				count++;
 			}
 		}
-		System.out.println("<!-- " + cnModleName + "½áÊø£¬¹²" + count + "¸ö¶ÔÏó -->");
+		System.out.println("<!-- " + cnModleName + "ç»“æŸï¼Œå…±" + count + "ä¸ªå¯¹è±¡ -->");
 		return count;
 	}
 
 	public static void main(String[] args) {
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/QZWF/src/com/qzdatasoft/comm/framework/bean",
-				"com/qzdatasoft/comm/framework/bean/", "¿ØÖÆ¿ò¼Ü");
+				"com/qzdatasoft/comm/framework/bean/", "æ§åˆ¶æ¡†æ¶");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/QZWF/src/com/qzdatasoft/comm/framework/zdbeans",
-				"com/qzdatasoft/comm/framework/zdbeans/", "×ÖµäĞÅÏ¢");
+				"com/qzdatasoft/comm/framework/zdbeans/", "å­—å…¸ä¿¡æ¯");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/QZWF/src/com/qzdatasoft/ggxx/bean",
-				"com/qzdatasoft/ggxx/bean/", "¹«¹²ĞÅÏ¢");
+				"com/qzdatasoft/ggxx/bean/", "å…¬å…±ä¿¡æ¯");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/QZWF/src/com/qzdatasoft/ggxx/bean/jzg",
-				"com/qzdatasoft/ggxx/bean/jzg/", "½ÌÖ°¹¤");
+				"com/qzdatasoft/ggxx/bean/jzg/", "æ•™èŒå·¥");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/QZWF/src/com/qzdatasoft/ggxx/bean/xj",
-				"com/qzdatasoft/ggxx/bean/xj/", "Ñ§ÉúĞÅÏ¢");
+				"com/qzdatasoft/ggxx/bean/xj/", "å­¦ç”Ÿä¿¡æ¯");
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/bygl",
-				"com/qzdatasoft/hdjw/bean/bygl/", "±ÏÒµ¹ÜÀí");
+				"com/qzdatasoft/hdjw/bean/bygl/", "æ¯•ä¸šç®¡ç†");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/cjgl",
-				"com/qzdatasoft/hdjw/bean/cjgl/", "³É¼¨¹ÜÀí");
+				"com/qzdatasoft/hdjw/bean/cjgl/", "æˆç»©ç®¡ç†");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/jxjh",
-				"com/qzdatasoft/hdjw/bean/jxjh/", "½ÌÑ§¼Æ»®");
+				"com/qzdatasoft/hdjw/bean/jxjh/", "æ•™å­¦è®¡åˆ’");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/kjgl",
-				"com/qzdatasoft/hdjw/bean/kjgl/", "¿¼¼¶¹ÜÀí");
+				"com/qzdatasoft/hdjw/bean/kjgl/", "è€ƒçº§ç®¡ç†");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/kkgl",
-				"com/qzdatasoft/hdjw/bean/kkgl/", "¿ª¿Î¹ÜÀí");
+				"com/qzdatasoft/hdjw/bean/kkgl/", "å¼€è¯¾ç®¡ç†");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/ksgl",
-				"com/qzdatasoft/hdjw/bean/ksgl/", "¿¼ÊÔ¹ÜÀí");
+				"com/qzdatasoft/hdjw/bean/ksgl/", "è€ƒè¯•ç®¡ç†");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/pkgl",
-				"com/qzdatasoft/hdjw/bean/pkgl/", "ÅÅ¿Î¹ÜÀí");
+				"com/qzdatasoft/hdjw/bean/pkgl/", "æ’è¯¾ç®¡ç†");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/view",
-				"com/qzdatasoft/hdjw/bean/view/", "½ÌÎñÊÓÍ¼");
+				"com/qzdatasoft/hdjw/bean/view/", "æ•™åŠ¡è§†å›¾");
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/xkgl",
-				"com/qzdatasoft/hdjw/bean/xkgl/", "Ñ¡¿Î¹ÜÀí");
+				"com/qzdatasoft/hdjw/bean/xkgl/", "é€‰è¯¾ç®¡ç†");
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/xkjs",
-				"com/qzdatasoft/hdjw/bean/xkjs/", "Ñ§¿Æ¾ºÈü");
+				"com/qzdatasoft/hdjw/bean/xkjs/", "å­¦ç§‘ç«èµ›");
 
 		FileIO.getHibernaetMappingXml(
 				"D:/workspace1.4/JiaoWu20081013/src/com/qzdatasoft/hdjw/bean/zljk",
-				"com/qzdatasoft/hdjw/bean/zljk/", "ÖÊÁ¿¼à¿Ø");
+				"com/qzdatasoft/hdjw/bean/zljk/", "è´¨é‡ç›‘æ§");
 
 	}
 }
